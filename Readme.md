@@ -1,7 +1,8 @@
 # Личный проект «Кекстаграм»
 
-* Студент: [lofi _](https://up.htmlacademy.ru/javascript-individual/2/user/1914907).
-* Наставник: `Неизвестно`.
+* Студент: [Паничева Полина](https://up.htmlacademy.ru/javascript-individual/2/user/1914907).
+* Ссылка на личный GitHub: [GitHub](https://github.com/eto-polinka/kekstagram#)
+* Наставник: [Владислав Доровлев](https://htmlacademy.ru/profile/dorovlev).
 
 ---
 
