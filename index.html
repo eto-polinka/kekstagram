@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <script src="js/functions.js"></script>
   <main>
 
     <!-- Фильтрация изображений от других пользователей -->
@@ -133,6 +132,7 @@
       </section>
 
       <!-- Здесь будут изображения других пользователей -->
+      <div class="pictures__list"></div>
 
     </section>
 
@@ -228,12 +228,15 @@
     </section>
   </template>
 
-    <!-- Сообщение с ошибкой загрузки изображений от других пользователей -->
-    <template id="data-error">
-      <section class="data-error">
-        <h2 class="data-error__title">Не удалось загрузить данные</h2>
-      </section>
-    </template>
+  <!-- Сообщение с ошибкой загрузки изображений от других пользователей -->
+  <template id="data-error">
+    <section class="data-error">
+      <h2 class="data-error__title">Не удалось загрузить данные</h2>
+    </section>
+  </template>
+
+  <!-- Подключаем главный модуль -->
+  <script type="module" src="js/main.js"></script>
 
 </body>
 </html>
