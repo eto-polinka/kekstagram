@@ -1,9 +1,5 @@
-
 const createPictureElement = (pictureData) => {
   const template = document.querySelector('#picture');
-  if (!template) {
-    throw new Error('Шаблон #picture не найден');
-  }
 
   const pictureElement = template.content.cloneNode(true);
 
@@ -20,21 +16,17 @@ const createPictureElement = (pictureData) => {
 };
 
 const renderPictures = (pictures) => {
-  const picturesContainer = document.querySelector('.pictures');
-  if (!picturesContainer) {
-    throw new Error('Контейнер .pictures не найден');
-  }
+  const container = document.querySelector('.pictures__list');
 
   const fragment = document.createDocumentFragment();
 
   pictures.forEach((picture) => {
-    const pictureElement = createPictureElement(picture);
-    fragment.appendChild(pictureElement);
+    const element = createPictureElement(picture);
+    fragment.appendChild(element);
   });
 
-  picturesContainer.innerHTML = '';
-
-  picturesContainer.appendChild(fragment);
+  container.innerHTML = '';
+  container.appendChild(fragment);
 };
 
 export { renderPictures };
