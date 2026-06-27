@@ -1,23 +1,4 @@
-import { generatePhotos } from './generators.js';
+import { renderPictures } from './picture.js';
+import { pictures } from './mock-data.js';
 
-const photos = generatePhotos();
-
-function renderPhotos() {
-  const container = document.getElementById('photos-container');
-
-  photos.forEach((photo) => {
-    const photoElement = document.createElement('div');
-    photoElement.className = 'photo-card';
-    photoElement.innerHTML = `
-      <h3>${photo.description}</h3>
-      <p> ${photo.likes} лайков</p>
-      <p> ${photo.comments.length} комментариев</p>
-      <p> ${photo.url}</p>
-    `;
-    container.appendChild(photoElement);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', renderPhotos);
-
-export { photos };
+renderPictures(pictures);
