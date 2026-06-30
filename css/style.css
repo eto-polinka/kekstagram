@@ -186,12 +186,14 @@ main {
    ========================================================================== */
 
 .pictures {
-  display: -ms-grid;
   display: grid;
   grid-gap: 10px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 1fr;
+}
 
-  -ms-grid-columns: (1fr)[7];
-      grid-template-columns: repeat(7, 1fr);
+.pictures__list {
+  display: contents;
 }
 
 .picture {
