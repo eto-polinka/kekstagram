@@ -19,24 +19,26 @@ const showMessage = (template) => {
     }
   }
 
-  const successButton = message.querySelector('.success__button');
-  const errorButton = message.querySelector('.error__button');
-
-  if (successButton) {
-    successButton.addEventListener('click', closeMessage);
-  }
-
-  if (errorButton) {
-    errorButton.addEventListener('click', closeMessage);
-  }
-
   document.addEventListener('keydown', onEscKeydown);
 
   message.addEventListener('click', (evt) => {
-    if (evt.target === message) {
+    if (evt.target === message || evt.target.closest('.success, .error')) {
       closeMessage();
     }
   });
+
+  setTimeout(() => {
+    const successButton = document.querySelector('.success__button');
+    const errorButton = document.querySelector('.error__button');
+
+    if (successButton) {
+      successButton.addEventListener('click', closeMessage);
+    }
+
+    if (errorButton) {
+      errorButton.addEventListener('click', closeMessage);
+    }
+  }, 0);
 };
 
 const showSuccessMessage = () => {

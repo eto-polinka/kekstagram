@@ -31,10 +31,13 @@ const renderFilteredPictures = () => {
   let filteredPictures = [];
 
   switch (activeFilter) {
-    case 'random':
+    case 'filter-default':
+      filteredPictures = currentPictures;
+      break;
+    case 'filter-random':
       filteredPictures = getRandomPictures(currentPictures);
       break;
-    case 'discussed':
+    case 'filter-discussed':
       filteredPictures = getDiscussedPictures(currentPictures);
       break;
     default:
