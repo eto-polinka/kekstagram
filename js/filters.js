@@ -71,5 +71,4 @@ const showFilters = (pictures) => {
   currentPictures = pictures;
   filterContainer.classList.remove('img-filters--inactive');
 };
-
 export { showFilters };
